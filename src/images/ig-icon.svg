@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="a" x1="-55.789%" x2="190.531%" y1="-58.873%" y2="184.945%">
+            <stop offset="0%" stop-color="#474BC7"/>
+            <stop offset="14.713%" stop-color="#742EA0"/>
+            <stop offset="37.29%" stop-color="#A2277B"/>
+            <stop offset="56.458%" stop-color="#DB553B"/>
+            <stop offset="84.857%" stop-color="#F7C358"/>
+            <stop offset="100%" stop-color="#D32570"/>
+        </linearGradient>
+        <linearGradient id="b" x1="7.415%" x2="93.806%" y1="5.147%" y2="94.436%">
+            <stop offset="0%" stop-color="#474BC7"/>
+            <stop offset="14.713%" stop-color="#742EA0"/>
+            <stop offset="37.29%" stop-color="#A2277B"/>
+            <stop offset="56.458%" stop-color="#DB553B"/>
+            <stop offset="84.857%" stop-color="#F7C358"/>
+            <stop offset="100%" stop-color="#D32570"/>
+        </linearGradient>
+        <linearGradient id="c" x1="-41.216%" x2="140.287%" y1="-46.975%" y2="145.965%">
+            <stop offset="0%" stop-color="#474BC7"/>
+            <stop offset="14.713%" stop-color="#742EA0"/>
+            <stop offset="37.29%" stop-color="#A2277B"/>
+            <stop offset="56.458%" stop-color="#DB553B"/>
+            <stop offset="84.857%" stop-color="#F7C358"/>
+            <stop offset="100%" stop-color="#D32570"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="52" cy="11" r="4" fill="url(#a)"/>
+        <rect width="60" height="60" x="2" y="2" stroke="url(#b)" stroke-width="4" rx="8"/>
+        <circle cx="32.5" cy="32.5" r="15.5" stroke="url(#c)" stroke-width="4"/>
+    </g>
+</svg>

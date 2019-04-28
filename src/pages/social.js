@@ -5,30 +5,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Social from "../components/social"
 
-export const iconImage = graphql`
-  fragment iconImage on File {
-    childImageSharp {
-      fluid(maxWidth: 100, maxHeight: 100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-export const iconQuery = graphql`
-  query {
-    dribble: file(relativePath: { eq: "dribble-icon@3x.png" }) {
-      ...iconImage
-    }
-    instagram: file(relativePath: { eq: "ig-icon@3x.png" }) {
-      ...iconImage
-    }
-    twitter: file(relativePath: { eq: "twitter-icon@3x.png" }) {
-      ...iconImage
-    }
-  }
-`
-
 const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -77,5 +53,29 @@ const SocialPage = () => (
     }}
   />
 )
+
+export const iconImage = graphql`
+  fragment iconImage on File {
+    childImageSharp {
+      fluid(maxWidth: 100, maxHeight: 100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const iconQuery = graphql`
+  query {
+    dribble: file(relativePath: { eq: "dribble-icon@3x.png" }) {
+      ...iconImage
+    }
+    instagram: file(relativePath: { eq: "ig-icon@3x.png" }) {
+      ...iconImage
+    }
+    twitter: file(relativePath: { eq: "twitter-icon@3x.png" }) {
+      ...iconImage
+    }
+  }
+`
 
 export default SocialPage

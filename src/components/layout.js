@@ -95,16 +95,16 @@ const Layout = ({ children }) => {
                 <NavDash path={pathname} nav="/" />
               </NavItemContainer>
               <NavItemContainer>
-                <NavItem to="/portfolio" path={pathname}>
+                <NavItem to="/portfolio/" path={pathname}>
                   Portfolio
                 </NavItem>
-                <NavDash path={pathname} nav="/portfolio" />
+                <NavDash path={pathname} nav="/portfolio/" />
               </NavItemContainer>
               <NavItemContainer>
-                <NavItem to="/social" path={pathname}>
+                <NavItem to="/social/" path={pathname}>
                   Social
                 </NavItem>
-                <NavDash path={pathname} nav="/social" />
+                <NavDash path={pathname} nav="/social/" />
               </NavItemContainer>
             </Navigation>
           </Container>

@@ -1,12 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `| Juri Ahn |`,
+    description: `Juri Ahn Graphic Designing Portfolio Site`,
+    author: `@juriAhn`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-material-ui",
+      // If you want to use styled components you should change the injection order.
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "juriahn.com",
+      },
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -14,7 +29,7 @@ module.exports = {
           {
             family: `Inconsolata`,
             variants: [`400`, `700`],
-          }
+          },
         ],
       },
     },

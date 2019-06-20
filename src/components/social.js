@@ -11,20 +11,25 @@ const SocialMedia = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 16px;
+  @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
 `
 
-const AccountHandle = styled.h3`
+const AccountHandle = styled.a`
   text-decoration: underline;
 `
 
-const Social = ({ icon, handle }) => (
+const Social = ({ icon, handle, url }) => (
   <SocialMedia>
     <Img
       fluid={icon}
       style={{ width: 100, height: 100 }}
       imgStyle={{ width: 100, height: 100 }}
     />
-    <AccountHandle>{handle}</AccountHandle>
+    <AccountHandle target="_blank" href={url}>
+      {handle}
+    </AccountHandle>
   </SocialMedia>
 )
 

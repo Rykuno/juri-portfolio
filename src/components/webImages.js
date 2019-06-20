@@ -36,7 +36,6 @@ const Image = () => (
       } = data
       console.log(edges)
       return edges.map(({ node }) => {
-        console.log(node.childImageSharp.fluid)
         return (
           <Img
             fluid={node.childImageSharp.fluid}

@@ -10,11 +10,17 @@ const Container = styled.div`
   width: 70%;
   height: 100vh;
   margin-left: 15%;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
 `
 
 const Background = styled.div`
   background-color: #a6ffdc;
-  width: 70%;
+  width: 50%;
   height: 70%;
   position: absolute;
   left: 15%;
@@ -22,20 +28,32 @@ const Background = styled.div`
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 1200px) {
+    position: absolute;
+    width: 100%;
+    top: 13%;
+    margin: auto;
+    left: 0;
+  }
 `
 
 const Page = styled.div`
-  width: 60%;
-  height: 115%;
+  width: 80%;
+  height: 120%;
   margin: auto;
   margin-top: 5%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 7px solid black;
+  border: 4px solid black;
   padding: 20px;
-  padding-top: 10%;
+  padding-top: 5%;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+    height: auto;
+  }
 `
 
 const Title = styled.h1`
@@ -44,6 +62,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   color: #7d7d7d;
+  margin-bottom: 0px;
 `
 
 const Email = styled(SubTitle)`
@@ -51,17 +70,23 @@ const Email = styled(SubTitle)`
 `
 
 const Divider = styled.div`
-  width: 50%;
+  width: 70%;
   height: 2px;
   background-color: black;
   margin: 32px;
 `
 
 const Text = styled.p`
+  /* text-align: justify; */
+  /* padding-left: 12%;
+  padding-right: 10%; */
+  /* font-size: 1.5em; */
+  width: 70%;
+  /* margin: auto; */
   text-align: center;
-  padding-left: 10%;
-  padding-right: 10%;
   color: #7d7d7d;
+  /* text-indent: 24px; */
+  /* font-weight: bold; */
 `
 
 const IndexPage = () => (
@@ -71,17 +96,25 @@ const IndexPage = () => (
       <Background>
         <Page>
           <Title>Juri Ahn</Title>
-          <SubTitle>Graphics/Software Designer</SubTitle>
+          <SubTitle>Graphics Designer</SubTitle>
           <SubTitle>Dallas, Tx</SubTitle>
-          <Email>juri@avyxia.com</Email>
+          <br />
+          <a href="mailto:juri@avyxia.com">
+            <Email>juri@avyxia.com</Email>
+          </a>
           <Divider />
           <Text>
-            Scamper stand with legs in litter box, but poop outside crash
-            against wall but walk away like nothing happened for i like frogs
-            and 0 gravity so cats secretly make all the worlds muffins. Munch,
-            munch, chomp, chomp my left donut is missing, as is my right for
-            behind the couch, yet i'm bored inside, let me out i'm lonely
-            outside, let me in i can't make up my mind whether to go in or out.
+            Hello! I am a UI/UX designer based here in the Dallas, TX area.
+          </Text>
+          <Text>
+            I specialize in web and software design/wireframes
+            <span style={{ color: "#565656" }}>(</span>and I dabble with
+            animation <span>&#128513;</span>
+            <span style={{ color: "#565656" }}>)</span>.
+          </Text>
+          <Text>
+            Feel free to reach out to me in any of my social media pages or
+            email me. I look forwards to working with you soon!
           </Text>
         </Page>
       </Background>

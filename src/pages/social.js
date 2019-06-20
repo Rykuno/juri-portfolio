@@ -12,15 +12,27 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin-left: 5%;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0;
+    align-items: center;
+  }
 `
 
 const SocialContainer = styled.div`
   display: flex;
   width: 65%;
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `
 
 const Title = styled.h2`
+  margin-top: 24px;
   color: #56a372;
 `
 
@@ -37,14 +49,17 @@ const SocialPage = () => (
               <Social
                 icon={data.dribble.childImageSharp.fluid}
                 handle="@yellingspaghetti"
+                url="https://dribbble.com/yellingspaghetti"
               />
               <Social
                 icon={data.instagram.childImageSharp.fluid}
                 handle="@yellingspaghetti"
+                url="https://www.instagram.com/yellingspaghetti/?hl=en"
               />
               <Social
-                icon={data.twitter.childImageSharp.fluid}
-                handle="@yellingspaghetti"
+                icon={data.linkedin.childImageSharp.fluid}
+                handle="@juriahn"
+                url="https://www.linkedin.com/in/juriahn/"
               />
             </SocialContainer>
           </Container>
@@ -72,7 +87,7 @@ export const iconQuery = graphql`
     instagram: file(relativePath: { eq: "ig-icon@3x.png" }) {
       ...iconImage
     }
-    twitter: file(relativePath: { eq: "twitter-icon@3x.png" }) {
+    linkedin: file(relativePath: { eq: "linkedin-icon.png" }) {
       ...iconImage
     }
   }

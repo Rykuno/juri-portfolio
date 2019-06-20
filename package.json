@@ -5,13 +5,16 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.0.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.29",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-material-ui": "^2.0.1",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-s3": "^0.2.5",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.32",
@@ -20,6 +23,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-media": "^1.9.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
@@ -35,7 +39,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby-plugin-s3 deploy -y"
   },
   "repository": {
     "type": "git",
